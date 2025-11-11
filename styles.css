@@ -1,0 +1,38 @@
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:'Cairo',system-ui,-apple-system,Segoe UI,Tahoma,Arial,sans-serif;direction:rtl;background:#0b1020;color:#eaf0ff}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.85);backdrop-filter:blur(8px);border-bottom:1px solid #223055}
+.header__row{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 0}
+.logo{display:flex;gap:10px;align-items:center}
+.logo img{width:44px;height:44px;border-radius:10px;border:1px solid #223055}
+.title{margin:0;font-size:20px}
+.btn{appearance:none;border:none;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;color:#0b1020;background:linear-gradient(135deg,#1e90ff,#22d3ee);box-shadow:0 6px 20px rgba(79,140,255,.25)}
+.btn.secondary{background:transparent;color:#eaf0ff;border:1px solid #223055}
+.grid{display:grid;gap:14px}
+@media(min-width:800px){.cols-2{grid-template-columns:1fr 1fr}.cols-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:linear-gradient(180deg,rgba(16,22,43,.9),rgba(12,18,37,.9));border:1px solid #223055;border-radius:18px;overflow:hidden}
+.card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.card .pad{padding:12px}
+.h2{font-size:22px;margin:10px 0}
+.h3{font-size:18px;margin:8px 0}
+.muted{color:#93a0bf}
+.stepper{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:6px 10px;border:1px solid #223055;border-radius:999px;color:#93a0bf}
+.pill.active{border-color:#1e90ff;color:#eaf0ff}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.hero{border:1px solid #223055;border-radius:22px;overflow:hidden}
+.hero img{width:100%;display:block}
+.badge{display:inline-flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid #223055;background:#0c1531;color:#93a0bf;font-size:12px}
+.choice{display:flex;gap:10px;flex-wrap:wrap}
+.option{display:flex;gap:10px;align-items:center;border:1px solid #223055;background:#0c1531;border-radius:12px;padding:8px 12px;cursor:pointer}
+.option input{accent-color:#1e90ff;width:18px;height:18px}
+.hidden{display:none}
+.footer{display:flex;gap:10px;align-items:center;justify-content:flex-start;margin:18px 0}
+.caption{font-size:14px;color:#93a0bf}
+input[type=text], input[type=email], input[type=tel]{width:100%;background:#0b1329;border:1px solid #223055;border-radius:10px;padding:10px 12px;color:#eaf0ff;outline:none}
+label.block{display:block}
+.lang{display:flex;gap:8px;align-items:center}
+.lang button{background:transparent;color:#eaf0ff;border:1px solid #223055;border-radius:10px;padding:6px 10px;cursor:pointer}
+.lang button.active{border-color:#1e90ff}

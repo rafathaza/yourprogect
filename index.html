@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>R2M — صمِّم نظامك بنفسك (بسيط)</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div class="container header__row">
+      <div class="logo">
+        <img src="assets/r2m_logo.png" alt="S2S Logo">
+        <div>
+          <h1 class="title">S2S — صمِّم نظامك بنفسك</h1>
+          <div class="caption">واجهة بسيطة • صور توضيحية • خطوة بخطوة</div>
+        </div>
+      </div>
+      <div class="lang">
+        <span class="caption">اللغة:</span>
+        <button id="langStandard" class="active">فصحى</button>
+        <button id="langYemeni">لهجة(صنعاني)</button>
+      </div>
+      <div class="stepper">
+        <span class="pill active">١ المقدّمة</span>
+        <span class="pill">٢ نوع المنشأة</span>
+        <span class="pill">٣ الحل</span>
+        <span class="pill">٤ التجريب</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Step 1 -->
+    <section id="step1">
+      <div class="hero card">
+        <img src="assets/hero.png" alt="Hero">
+        <div class="pad">
+          <h2 id="h2_pain" class="h2">ما المشكلة التي تُزعجك؟ اختر ما ينطبق عليك 👇</h2>
+          <div class="grid cols-3">
+            <label class="card"><img src="assets/pain_attendance.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="attendance"><span>تأخر/غياب الحضور</span></div></div></label>
+            <label class="card"><img src="assets/pain_gate.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="gate"><span>زحام البوابات والمركبات</span></div></div></label>
+            <label class="card"><img src="assets/pain_line.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="line"><span>توقف خط الإنتاج</span></div></div></label>
+            <label class="card"><img src="assets/pain_inventory.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="inventory"><span>ضياع/نقص المخزون</span></div></div></label>
+            <label class="card"><img src="assets/pain_docs.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="docs"><span>كثرة الفواتير الورقية</span></div></div></label>
+            <label class="card"><img src="assets/pain_theft.png" alt=""><div class="pad"><div class="option"><input type="checkbox" name="pain" value="theft"><span>سلوك غير اعتيادي/سرقات</span></div></div></label>
+          </div>
+          <div class="actions"><button class="btn" id="to2">التالي</button></div>
+          <div class="caption">لا تحتاج لفهم التقنيات — فقط اختر المشكلة، ونحن نجهّز الحل.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 2 -->
+    <section id="step2" class="hidden">
+      <h2 id="h2_type" class="h2">ما نوع منشأتك؟</h2>
+      <div class="grid cols-3">
+        <label class="card"><img src="assets/type_factory.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="manufacturing"><span>مصنع</span></div></div></label>
+        <label class="card"><img src="assets/type_office.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="office"><span>شركة/مكتب</span></div></div></label>
+        <label class="card"><img src="assets/type_medical.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="healthcare"><span>مركز طبي</span></div></div></label>
+        <label class="card"><img src="assets/type_logistics.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="logistics"><span>لوجستيات/مخازن</span></div></div></label>
+        <label class="card"><img src="assets/type_retail.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="retail"><span>تجزئة</span></div></div></label>
+        <label class="card"><img src="assets/type_gov.png" alt=""><div class="pad"><div class="option"><input type="radio" name="btype" value="government"><span>حكومة</span></div></div></label>
+      </div>
+      <div class="footer">
+        <button class="btn secondary" id="back1">رجوع</button>
+        <button class="btn" id="to3">أظهر الحل المقترح</button>
+      </div>
+    </section>
+
+    <!-- Step 3 -->
+    <section id="step3" class="hidden">
+      <h2 id="h2_solution" class="h2">الحل المقترح — بطريقة بسيطة وبالصور</h2>
+      <div class="grid cols-3">
+        <div class="card"><img id="flow1" src="assets/flow_1.png" alt=""><div class="pad"><div class="h3">١) الكاميرا تشاهد</div><div class="muted">نستخدم الموجود قدر الإمكان.</div></div></div>
+        <div class="card"><img id="flow2" src="assets/flow_2.png" alt=""><div class="pad"><div class="h3">٢) لوحة متابعة بسيطة</div><div class="muted">أرقام سهلة ورسوم واضحة.</div></div></div>
+        <div class="card"><img id="flow3" src="assets/flow_3.png" alt=""><div class="pad"><div class="h3">٣) تنبيه/تقرير تلقائي</div><div class="muted">واتساب/بريد — تختار ما يناسبك.</div></div></div>
+      </div>
+      <hr/>
+      <div class="card">
+        <div class="pad">
+          <div class="h3">ماذا سنركّب لك؟</div>
+          <ul id="rec-list" class="big"></ul>
+          <div class="kpis">
+            <span class="kpi">تقليل التكاليف</span>
+            <span class="kpi">رفع الكفاءة</span>
+            <span class="kpi">تقارير تلقائية</span>
+            <span class="kpi">تنبيهات فورية</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="btn secondary" id="back2">رجوع</button>
+        <button class="btn" id="to4">اطلب النسخة التجريبية</button>
+      </div>
+    </section>
+
+    <!-- Step 4 -->
+    <section id="step4" class="hidden">
+      <h2 id="h2_poc" class="h2">بيانات التواصل لنسخة تجريبية سريعة</h2>
+      <div class="grid cols-2">
+        <label class="block">الاسم<input type="text" id="name" placeholder="مثال: أحمد محمد اليمني.."></label>
+        <label class="block">الجهة<input type="text" id="org" placeholder="مثال: مصنع .."></label>
+        <label class="block">الهاتف/واتساب<input type="tel" id="phone" placeholder="رقم هاتفك"></label>
+        <label class="block">البريد الإلكتروني<input type="email" id="email" placeholder="بريدك الالكتروني"></label>
+      </div>
+      <div class="footer">
+        <button class="btn secondary" id="exportJson">تصدير كـ JSON</button>
+        <button class="btn" id="sendEmail">إرسال بريد</button>
+        <button class="btn" id="sendWhatsApp">إرسال واتساب</button>
+        <button class="btn" id="sendSheets">إرسال إلى Google Sheets</button>
+      </div>
+      <div class="caption">* لتجميع الطلبات تلقائيًا في Google Sheets، أضف رابط Apps Script في <code>config.js</code>.</div>
+    </section>
+
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
